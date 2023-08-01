@@ -87,8 +87,8 @@ const questions = [
     optionElement.classList.add("selected");
   
     if (currentQuestionIndex < questions.length - 1) {
-      clearInterval(timer);// Clear the timer when an option is selected and it's not the last question
-      timer = setInterval(updateTimer, 1000); // Restart the timer
+      clearInterval(timer);
+      timer = setInterval(updateTimer, 1000); 
     }
     }
   
@@ -99,9 +99,9 @@ const questions = [
 
     const questionElement = document.getElementById("question");
     const optionsElement = document.getElementById("options");
-    const timeLeftElement = document.getElementById("time-left"); // Add this line
+    const timeLeftElement = document.getElementById("time-left"); 
   
-    timeLeftElement.textContent = questionTimeLimit.toString(); // Reset the timer to the original time limit
+    timeLeftElement.textContent = questionTimeLimit.toString(); 
   
     const currentQuestion = questions[currentQuestionIndex];
     if (currentQuestion.userAnswer === currentQuestion.answer) {
@@ -132,7 +132,7 @@ const questions = [
     resultContainer.innerHTML += "</ul>";
     resultContainer.style.display = "block";
   
-    // Hide question container and submit button
+    // Here I'm hiding the submit button, the timer and the question container
     document.querySelector(".question-container").style.display = "none";
     document.getElementById("submit-btn").style.display = "none";
     document.getElementById("timer").style.display = "none";
@@ -174,12 +174,12 @@ const questions = [
     displayQuestion();
   }
   
-  // Add event listener to the submit button
+
   document.getElementById("submit-btn").addEventListener("click", checkAnswer);
   
-  // Add event listener to the restart button
+
   document.getElementById("restart-btn").addEventListener("click", restartQuiz);
   
-  // Display the first question when the page loads
+  // Displaying the questions 
   displayQuestion();
   
