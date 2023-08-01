@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Quiz App</title>
+  <link rel="stylesheet" href="quiz.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,500;1,200;1,400&family=Raleway:ital,wght@0,300;1,200&family=Roboto:ital,wght@1,100;1,300;1,400&family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="https://media.istockphoto.com/id/1279243899/video/clean-soft-and-shiny-background-animation-abstract-simple-circle-beatiful-motion-design-the.mp4?s=mp4-640x640-is&k=20&c=9yyOm-Tby1J-8-svwlgEckfAXBtYYGibmxhBOHIRYmg=" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="quiz-container">
+    <h1>THE QUIZ HUB</h1>
+    <div class="question-container">
+      <p id="question"></p>
+      <div id="options">
+
+      </div>
+    </div>
+    <div id="timer">Time Left: <span id="time-left">15</span>s</div> <!-- Set initial value to 15 seconds -->
+    <button id="submit-btn">Submit</button>
+    <div id="result-container"></div>
+    <button id="restart-btn">Restart Quiz</button>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
